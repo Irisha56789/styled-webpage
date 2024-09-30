@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #4CAF50; /* Изменен цвет фона на зелёный */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav {
+    background-color: #f2f2f2; /* Измените цвет фона навигационного меню */
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Добавлено, чтобы убрать отступы списка */
+}
+
+.nav__link {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block; /* Добавлено, чтобы ссылки имели отступы */
+}
+
+.nav__link:hover {
+    color: #ff0000;
+}
+
+.content {
+    padding: 20px;
+    background-color: #f9f9f9; /* Добавлен цвет фона для контента */
+    margin: 20px; /* Добавлены отступы для контента */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Стили для навигационных ссылок */
+.nav__link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #000; /* Цвет текста по умолчанию */
+    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+    padding: 5px; /* Добавляем немного отступа */
+}
+
+.nav__link:hover {
+    color: #ff6347; /* Цвет текста при наведении (например, томатный) */
+}
+
+/* Добавление декоративной стрелки после текста ссылок в навигации */
+.nav__link::after {
+    content: ' ➔'; /* Декоративная стрелка */
+    font-size: 0.8em; /* Размер стрелки */
+    position: absolute; /* Позволяет позиционировать стрелку */
+    left: 100%; /* Сдвигаем стрелку вправо от текста */
+    margin-left: 5px; /* Отступ между текстом и стрелкой */
+    opacity: 0; /* Скрываем стрелку по умолчанию */
+    transition: opacity 0.3s; /* Плавный переход */
+}
+
+.nav__link:hover::after {
+    opacity: 1; /* Показываем стрелку при наведении */
+}
